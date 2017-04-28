@@ -2,6 +2,7 @@ import csv
 
 
 def display_inventory(inventory):
+    # function displays the inventory
 
     print('Inventory: ')
     for key, value in inventory.items():
@@ -10,6 +11,8 @@ def display_inventory(inventory):
 
 
 def add_to_inventory(inventory, added_items):
+    # function adds to the inventory dictionary a list of items from added_items
+
     for i in range(len(added_items)):
         if added_items[i] not in inventory:
             inventory.update({added_items[i]: 0})
@@ -21,7 +24,7 @@ def add_to_inventory(inventory, added_items):
 
 
 def print_table(inventory, order=None):
-    # function sort and print element from inventory 
+    # function takes your inventory and displays it in a well-organized table
 
     print('Inventory: ')
     key_len_list = []                          # longest_str = max(len(key) for key in inventory)
@@ -56,6 +59,8 @@ def print_table(inventory, order=None):
 
 
 def import_inventory(inventory, filename='import_inventory.csv'):
+    # function imports new inventory items from a .csv file
+
     filecsv = open(filename, 'r')
     reader = csv.reader(filecsv)
     new_elem = []
@@ -66,7 +71,9 @@ def import_inventory(inventory, filename='import_inventory.csv'):
 
 
 def export_inventory(inventory, filename='export_inventory.csv'):
-    filecsv = open(filename, 'a')
+    # function exports the inventory into a .csv file
+
+    filecsv = open(filename, 'w')
     writer = csv.writer(filecsv)
     elem_list = []
     for key, value in inventory.items():
