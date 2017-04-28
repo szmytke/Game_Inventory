@@ -66,7 +66,7 @@ def import_inventory(inventory, filename='import_inventory.csv'):
 
 
 def export_inventory(inventory, filename='export_inventory.csv'):
-    filecsv = open(filename, 'a')
+    filecsv = open(filename, 'w')
     writer = csv.writer(filecsv)
     elem_list = []
     for key, value in inventory.items():
