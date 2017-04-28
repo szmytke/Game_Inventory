@@ -21,8 +21,7 @@ def add_to_inventory(inventory, added_items):
 
 
 def print_table(inventory, order=None):
-    '''function sort and print element
-    from inventory '''
+    # function sort and print element from inventory 
 
     print('Inventory: ')
     key_len_list = []                          # longest_str = max(len(key) for key in inventory)
