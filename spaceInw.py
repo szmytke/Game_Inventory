@@ -24,7 +24,7 @@ def add_to_inventory(inventory, added_items):
 
 
 def print_table(inventory, order=None):
-    # function takes your inventory and displays it in a well-organized table
+    # function takes inventory and displays it in a well-organized table
 
     print('Inventory: ')
     key_len_list = []                          # longest_str = max(len(key) for key in inventory)
